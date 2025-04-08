@@ -2,8 +2,12 @@
   "routes": [
     {
       "route": "/api/*",
-      "rewrite": "https://74.225.250.3:5000/:path",
+      "rewrite": "https://74.225.250.3:5000/api/:path",
       "allowedRoles": ["anonymous"]
     }
-  ]
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/api/*"]
+  }
 }
