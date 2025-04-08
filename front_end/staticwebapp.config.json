@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "route": "/api/*",
+      "rewrite": "https://74.225.250.3:5000/:path",
+      "allowedRoles": ["anonymous"]
+    }
+  ]
+}
