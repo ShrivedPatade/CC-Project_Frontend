@@ -31,7 +31,7 @@ const App = () => {
     setLoading(true);
 
     try {
-      const postResponse = await fetch('https://74.225.250.3:5000/chatbot', {
+      const postResponse = await fetch('/api/chatbot', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query, k: 3 }),
