@@ -7,4 +7,13 @@ export default defineConfig({
   build: {
     outDir: 'dist'
   }
+  server: {
+    proxy: {
+      '/chatbot': {
+        target: 'http://74.225.250.3:5000',
+        changeOrigin: true,
+        secure: false,
+      }
+    }
+  }
 })
